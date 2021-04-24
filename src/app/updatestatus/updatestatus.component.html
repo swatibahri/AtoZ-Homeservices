@@ -1,0 +1,17 @@
+<div class="checkout">
+    <div class="container">
+      Order ID :- {{oid}}<br/>
+      Current Status:- {{currst}}<br/>
+      Choose New Status <select name="st" [(ngModel)]="nst">
+        <option value="">Choose</option>
+        <option>Shipped</option>
+        <option>Cancelled</option>
+        <option>In-Transit</option>
+        <option>Delivered</option>
+        <option>Delayed</option>
+        <option>Returned</option>
+      </select><br/>
+      <input type="button" name="s1" (click)="updatestatus()" value="Update"><br/>
+      {{msg}}
+      </div>
+</div>

@@ -1,0 +1,25 @@
+<div  class="col-md-14 serv-grid2">  
+    <div class="agile_top_brands_grids">
+      <div *ngFor="let x of allemp" class="col-md-3 top_brand_left">
+       <div class="col-md-10 serv-sub1">
+          <div class="hover14 column">
+            <div class="agile_top_brand_left_grid">
+              <div class="agile_top_brand_left_grid1">
+                <figure>
+                  <div class="snipcart-item block" >
+                    <div class="snipcart-thumb">
+                      <a routerLink="/empdetails" [queryParams]="{pid:x._id}"><img height='200' title=" " alt=" " src="uploads/{{x.ppic}}" />	
+                      <h5>{{x.name}}</h5></a> 
+                    </div>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+        <div class="clearfix"> </div>
+        {{msg}}
+      </div>
+  </div>

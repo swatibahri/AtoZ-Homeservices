@@ -1,0 +1,49 @@
+ <!-- breadcrumbs -->
+ <div class="breadcrumbs-w3l">
+  <div class="container">
+    <span class="breadcrumbs">
+      <a href="index.html">Home</a> |
+      <span> Services</span>
+    </span>
+  </div>
+</div>
+<!-- //breadcrumbs -->
+<!-- /services -->
+<div class="services w3ls-section">
+  <div class="container">
+    <h4 class="main-title">services offered</h4>
+    <div class="services-main">
+      <div class="col-md-14 serv-grid1">
+        <h4 class="sub1">your complete home solution</h4>
+        <h4 class="sub1">services that you need we will provide at your door step</h4>
+
+  </div>
+  
+    
+          <div class="agile_top_brands_grids">
+           <div  class="col-md-12 serv-grid2"> 
+              <!-- <div class="col-md-8 serv-grid2"> -->
+              <div *ngFor="let x of allcategory" class="col-md-4 top_brand_left">
+             <!-- <div class="col-md-4 serv-sub1">     -->
+                <div class="col-md-7 serv-sub1">
+                  <div class="hover10 column">
+                    <div class="agile_top_brand_left_grid">
+                      <div class="agile_top_brand_left_grid1">
+                        <figure><br/>
+                          <div class="snipcart-item block" >
+                            <div class="snipcart-thumb">
+                              <a routerLink="/showsubcat" [queryParams]="{catid:x.cname}"><img height='100' title=" " alt=" " src="uploads/{{x.catpic}}" /></a>		
+                              <h5>{{x.cname}}</h5><br/>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+                </div>
+                </div>
+                <div class="clearfix"> </div>
+                {{msg}}
+              </div>
+          </div>

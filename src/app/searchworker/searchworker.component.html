@@ -1,0 +1,49 @@
+<!-- contact -->
+<div class="w3ls-section banner-single">
+        <div class="container">
+          <h4 class="main-title">Search Employees</h4><br/><br/>
+          <br/>
+          <br/>
+         
+            <!-- <div class="col-md-6 contact-left"> -->
+                <div class="col-sm-offset-3 col-md-8 w3layouts-reg-form contact-form-row-agileinfo">
+            
+            <!-- <div class="col-md-6 w3layouts-reg-form contact-form-row-agileinfo"> -->
+            
+              <form action="#" method="post" class="banner_form contact-inner-form">
+                <!-- <div class="contact-form-left contact-field1"> -->
+         <div class="sec-left">
+            <label class="contact-form-text">Email Address</label>
+              <input type="email" placeholder="xxx@xx.com" required="" name="em" [(ngModel)]="un">
+      
+              <input type="submit" value="Search" name="s1" (click)="onsearch()">
+              <br/>{{msg}}
+              <br/>
+              <a routerLink ="/emplist"><h4 style="color:white;">Click Here to check list of Employees<span class ="glyphicon glyphicon-home"></span> </h4></a> <br/>
+              
+            
+        <div *ngIf = "visibility">
+             <div class="col-md-4 agileinfo_single_left">
+                    <img id="example" src="uploads/{{ppic}}" alt=" " class="img-responsive">
+              </div>
+            
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <h4 style="color:white;">Name :- {{name}}</h4>
+              <h4 style="color:white;">Phone :- {{phone}}</h4>
+              <h4 style="color:white;">Address :- {{address}}</h4>
+              <h4 style="color:white;">Gender :- {{gender}}</h4>
+              <h4 style="color:white;">City :- {{cityname}}</h4>
+              <h4 style="color:white;">Category :- {{cname}}</h4>
+              <h4 style="color:white;">Sub-Category :- {{scname}}</h4>
+              <h4 style="color:white;">Experiance :- {{exp}}</h4>
+              <h4 style="color:white;">Charges :- {{charges}}</h4>
+            </div>
+          </div>
+         </form>
+        </div>
+      </div>
+      <!-- //login -->

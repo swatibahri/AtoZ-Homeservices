@@ -1,0 +1,65 @@
+
+  
+      
+<!-- //breadcrumbs -->
+<!-- checkout -->
+<div class="checkout">
+  <div class="container">
+       
+      
+      <div *ngIf="visibility"> <h5 class="main-title">Please add worker to cart first</h5>
+          <div class="checkout-right-basket">
+                       <a routerLink="/showcategory"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
+          </div></div>
+      <div *ngIf="!visibility">
+            <h5 class="main-title">Your shopping cart contains: <span>{{prodcount}} worker</span></h5>
+      <div class="checkout-right">
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th>SL No.</th>	
+                      <th>Picture</th>
+                      <th>Name</th>
+                      <th>Rate</th>
+                      <th>Remove</th>
+                      
+                  </tr>
+              </thead>
+              <tr class="rem1" *ngFor="let x of cart;let i=index">
+                  <td class="invert">{{i+1}}</td>
+                  <td><img height="75" src="uploads/{{x.ppic}}" alt=" "/></td>
+         
+                  <td class="invert">{{x.name}}</td>
+                  
+                  <td class="invert">{{x.charges}}</td>
+
+                 <td class="invert">
+                  <div class="rem">
+                  <a routerLink = "#" (click)="ondel(x._id)">Delete</a>
+                  </div>
+              </td>
+              </tr>
+              
+                         
+          </table>
+          Your grand total is Rs.{{gtotal}}
+          <div class="login">
+              <div class="checkout-right-basket">
+ 
+            <div class="form-w3agile">
+              <h4><a routerLink="/showcategory"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a></h4>
+              <h4><a routerLink="/checkout"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Checkout</a></h4>
+              </div>
+            </div>
+
+          <div class="checkout-right-basket">
+              
+              
+          </div>
+      </div>
+     </div>
+      
+  </div>
+</div>
+
+    

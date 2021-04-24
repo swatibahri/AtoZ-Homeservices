@@ -1,0 +1,75 @@
+<div class="content">
+ <div class="login">
+    <div class="container">
+        <span class="breadcrumbs">
+          <a href="index.html">Home</a> |
+          <span> Services</span>
+        </span>
+      </div>
+    </div>
+    <!-- //breadcrumbs -->
+    <!-- /services -->
+    
+        <div class="services-main">
+            <div class="w3ls-section banner-single">
+                <div class="container">
+                  <h4 class="main-title">Add Sub-Category</h4>
+              
+                  <div class="about-inner-main">
+                    <div class="col-md-6 contact-left">
+                
+                    </div>
+                    <div class="col-sm-offset-3 col-md-8 w3layouts-reg-form contact-form-row-agileinfo">
+                     
+                      <form action="#" method="post" class="banner_form contact-inner-form">
+                   
+            <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
+                <label class="contact-form-text">Choose Category</label>  
+              <select name="cat" [(ngModel)]="cat" class="form-control">  
+                <option value="">Choose Category</option>
+                <option *ngFor="let x of allcategory" value="{{x.cname}}">{{x.cname}}</option>
+              </select>
+               
+            </div>
+            <div class="sec-left">
+                <label class="contact-form-text">Enter Sub-Category</label> 
+                <input  type="text" class="form-control" placeholder="Sub Category Name" name="scname" [(ngModel)] ="scname" onfocus="this.value = '';" onblur="if (this.value == '') " required="">
+                <div class="clearfix"></div>
+              </div><br/>
+              <div class="sec-left">
+                  <h4 style="color:white;">
+                <input  type="file" name="scatpic" (change) ="fileselected($event)" onfocus="this.value = '';" onblur="if (this.value == '') " required="">
+                </h4>
+                <div class="clearfix"></div>
+              </div>
+              <input type="submit" value="Add" name = "s1" (click) ="onscatadd()">
+            <br/>{{msg}}
+            </form>
+            
+            </div>
+            </div>
+<!-- 
+            <div class="services w3ls-section">
+                    <div class="container">
+                    <div class="col-sm-offset-0 col-sm-6">
+                    <h5 class="main-title">Already added subcategories</h5>
+                    </div>
+                </div>
+               
+                  <div class="col-md-12 serv-grid2">
+                          <div *ngFor ="let x of allsubcategory">
+                              <div class="col-md-3 serv-sub1">
+                              <img src="uploads/{{x.scatpic}}" alt="" />
+                              <h5>{{x.scname}}</h5>
+                              <h6><a routerLink = "#" (click) ="oncatupdate(x._id,x.scname,x.scatpic)">Update</a></h6>
+                              <h6><a routerLink = "#" (click) ="oncatdelete()">Delete</a></h6>
+                            </div>
+        </div> -->
+          </div>
+      </div>
+      </div>
+        <!--login-->
+    </div>
+    <!--content-->
+    
+    

@@ -1,0 +1,47 @@
+ <!-- breadcrumbs -->
+ <div class="breadcrumbs-w3l">
+    <div class="container">
+      <span class="breadcrumbs">
+        <a href="index.html">Home</a> |
+        <span> Services</span>
+      </span>
+    </div>
+  </div>
+  <!-- //breadcrumbs -->
+  <div class="w3ls-section banner-single">
+        <div class="container">
+          <h4 class="main-title">List of Employees</h4><br/><br/>
+          
+
+  <div class="w3ls-section banner-single">
+     <div class="container">
+      <table class="table table-striped">
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Gender</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Category</th>
+          <th>Sub-Category</th>
+          <th>Username</th>
+
+          <th>Delete</th>
+        </tr>
+        <tr *ngFor="let x of userlist">
+          <td>{{x.name}}</td>
+          <td>{{x.phone}}</td>
+          <td>{{x.gender}}</td>
+          <td>{{x.address}}</td>
+          <td>{{x.cityid}}</td>
+          <td>{{x.catid}}</td>
+          <td>{{x.subcatid}}</td>
+          <td>{{x.username}}</td>
+          <td><a (click)="onuserdelete(x._id)">Delete</a></td>
+        </tr>
+      </table>
+     
+    </div>
+  </div>
+  <!-- //login -->
+  

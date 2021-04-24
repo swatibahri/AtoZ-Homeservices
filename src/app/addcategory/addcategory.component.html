@@ -1,0 +1,71 @@
+<!-- breadcrumbs -->
+<div class="breadcrumbs-w3l">
+  <div class="container">
+    <span class="breadcrumbs">
+      <a href="index.html">Home</a> |
+      <span> Services</span>
+    </span>
+  </div>
+</div>
+<!-- //breadcrumbs -->
+<!-- /services -->
+
+    <div class="services-main">
+        <div class="w3ls-section banner-single">
+            <div class="container">
+              <h4 class="main-title">Add Category</h4>
+          
+              <div class="about-inner-main">
+                <div class="col-md-6 contact-left">
+            
+                </div>
+                <div class="col-sm-offset-3 col-md-8 w3layouts-reg-form contact-form-row-agileinfo">
+                 
+                  <form action="#" method="post" class="banner_form contact-inner-form">
+                <div class="sec-left">
+                    <label class="contact-form-text">Enter Category</label>
+                  <input  type="text" class="form-control" placeholder="Category Name" name="cname" [(ngModel)] ="cname" onfocus="this.value = '';" onblur="if (this.value == '') " required="">
+                  <div class="clearfix"></div>
+                </div><br/>
+                <div class="sec-left">
+                    <h4 style="color:white;"><input  type="file" name="catpic" (change) ="fileselected($event)" onfocus="this.value = '';" onblur="if (this.value == '') " required=""></h4>
+                  <div class="clearfix"></div>
+                </div>
+                <div *ngIf = "visibility">
+                  <img src ="uploads/{{x.catpic}}" height ="75"><br/>
+                  <h4 style="color:white;">Choose new image,if required</h4>
+                  <input type = "submit" value ="Update" name ="s2" (click) ="oncatupdatedb()">
+                  
+                </div>
+                <input type="submit" value="Add" name = "s1" (click) ="oncatadd()">
+              <br/>{{msg}}
+              </form>
+              </div>
+              </div>
+            </div>
+        
+        <div class="services w3ls-section">
+            <div class="container">
+              <div class="col-sm-offset-3 col-sm-5">
+              <h5 class="main-title">Already added categories</h5>
+            </div>
+       
+          <div class="col-md-12 serv-grid2">
+                  <div *ngFor ="let x of allcategory">
+                      <div class="col-md-3 serv-sub1">
+                      <img src="uploads/{{x.catpic}}" alt="" />
+                      <h5>{{x.cname}}</h5>
+                      <h6><a routerLink = "#" (click) ="oncatupdate(x._id,x.cname,x.catpic)">Update</a></h6>
+                      <h6><a routerLink = "#" (click)="oncatdelete(x._id)">Delete</a></h6>
+                    </div>
+</div>
+      
+     
+   
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- //services -->

@@ -1,0 +1,56 @@
+<!-- contact -->
+<div class="w3ls-section banner-single">
+  <div class="container">
+    <h4 class="main-title">Signup for Users</h4><br/><br/>
+    <h5 class="main-title" align="center"><a routerLink="/signupworker">Click to register urself as an Employee</a></h5>
+    
+    <div class="about-inner-main">
+      <!-- <div class="col-md-6 contact-left"> -->
+          <div class="col-sm-offset-3 col-md-8 w3layouts-reg-form contact-form-row-agileinfo">
+      
+      <!-- <div class="col-md-6 w3layouts-reg-form contact-form-row-agileinfo"> -->
+      
+        <form action="#" method="post" class="banner_form contact-inner-form">
+          <!-- <div class="contact-form-left contact-field1"> -->
+            <div class="sec-left">
+             <label class="contact-form-text">Name</label>
+              <input placeholder="Name " name="name" type="text" [(ngModel)] ="name" required="">
+            </div>
+            <div class="sec-right">
+                <label class="contact-form-text">Phone</label>
+              <input placeholder="Phone " name="phone" type="text" [(ngModel)] ="phone" required="">
+            </div>
+            <label class="contact-form-text">Choose Your Gender</label><br/>
+            
+            <label><h4 style="color:white;"><input type="radio" name ="gen" value="Male" [(ngModel)]="gender" >Male</h4></label>&nbsp;
+            <label><h4 style="color:white;"><input type="radio" name ="gen" value="Female" [(ngModel)]="gender" >Female</h4></label><br/>
+
+            <div class="sec-right">
+                <label class="contact-form-text">Email Address</label>
+              <input placeholder="xxx@xx.com " name="email" type="text"  [(ngModel)] ="un" required="">
+            </div>
+            <div class="sec-right">
+                <label class="contact-form-text">Password</label>
+              <input placeholder="xxxxxx " name="password" type="text" [(ngModel)] ="pass" required="">
+            </div>
+            <div class="sec-right">
+                <label class="contact-form-text">Confirm Password</label>
+              <input placeholder=" Confirm Password " name="cpassword" type="text" [(ngModel)] ="cpass" required="">
+            </div>
+            <div class ="sec-right"> 
+            <label class="contact-form-text">Your City</label>
+             <select name="city" [(ngModel)]="cityname" class="form-control" (change)="fetchallcat()">
+              <option value="">Choose City</option>
+              <option *ngFor="let x of allcity" value="{{x.cityname}}">{{x.cityname}}</option>
+            </select>
+          </div>
+            
+          <div class="contact-form-right contact-field2">
+            <input type="submit" value="Submit" (click) = "onsclick()">
+          </div>
+          {{msg}}
+
+      <div class="clearfix"></div>
+   
+
+<!-- contact -->

@@ -1,0 +1,159 @@
+<!-- header -->
+<div class="w3layouts-header">
+    <div class="container">
+
+        <div class="logo-nav-agileits">
+            <div class="logo-nav-left">
+                <h1>
+                    <a href="index.html">
+                        <span class="fa fa-home"></span>a2z
+                        <span class="logo-title">home services</span>
+                        
+                    </a>
+                </h1>
+            </div>
+
+                    <div class="h3-title">
+                        <div class="top-left">
+                            <!-- <a href="#"> Help  <i class="glyphicon glyphicon-phone" aria-hidden="true"></i> +0123-456-789</a> -->
+                            <span class="logo-title">Welcome {{name}}</span>
+                        </div>
+                    
+                    </div>
+            
+                
+            <div class="header-grid-left-wthree">
+                <div class="h3-title">
+                    <h3>contact us</h3>
+                </div>
+                
+                <ul>
+                    <li>
+                        <span class="fa fa-envelope" aria-hidden="true"></span>
+                        <a href="mailto:info@example.com">a2zservices.com</a>
+                    </li>
+                    <li>
+                        <span class="fa fa-phone" aria-hidden="true"></span>+91 8437349780</li>
+                    <li>
+                        <span class="fa fa-mobile" aria-hidden="true"></span> +91 8437305305
+                    </li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+        <div class="logo-nav-left1">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">Menu
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a routerLink="sitehome">Home</a>
+                        </li>
+
+                        <li>
+                            <a routerLink="about.html">about us</a>
+                        </li>
+                        <li>
+                            <a routerLink="showcategory">services</a>
+                            
+                        </li>
+                        <li>
+                            <a routerLink="projects.html">Projects</a>
+                        </li>
+                        <li>
+                            <a routerLink="plan.html">plans</a>
+                        </li>
+                        <li *ngIf ="visibility">
+                            <a routerLink="signup">Signup</a>
+                        </li>
+                        <li *ngIf ="visibility">
+                            <a routerLink="login">Login</a>
+                        </li>
+                        <li *ngIf ="!visibility">
+                            <a routerLink="logout" (click) ="onlogout()">logout</a>
+                        </li>
+                        <li *ngIf ="!visibility">
+                            <a routerLink="changepassword"> Change Password</a>
+                        </li>
+                        <li>
+                            <a routerLink="contact.html">contact us</a>
+                        </li>
+                        <!-- <li>
+                            <a routerLink="status.html">track service status</a>
+                        </li> -->
+                        <li class="s-bar">
+                            <div class="search-w3_agileits">
+                                <input class="search_box" type="checkbox" id="search_box">
+                                <label class="icon-search" for="search_box">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                </label>
+                                <div class="search_form">
+                                    <form action="#" method="post">
+                                        <input type="search" name="Search" placeholder=" " />
+                                        <input type="submit" value="Search">
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //header -->
+<!-- banner -->
+<div class="banner-silder">
+    <div id="JiSlider" class="jislider">
+        <ul>
+            <li>
+                <div class="banner-top banner-top1">
+                    <div class="container">
+                        <div class="banner-info info2">
+                            <h3>one stop home services</h3>
+                            <p>let us do it for you.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="banner-top banner-top2">
+                    <div class="container">
+                        <div class="banner-info bg3 info2">
+                            <h3>one click repair service</h3>
+                            <p>repair.&nbsp;improve.&nbsp;maintain</p>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-top banner-top3">
+                    <div class="container">
+                        <div class="banner-info bg3">
+                            <h3>Property Maintenance Services</h3>
+                            <p>one call does it all.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    

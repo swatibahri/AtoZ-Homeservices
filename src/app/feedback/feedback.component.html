@@ -1,0 +1,40 @@
+ <!-- breadcrumbs -->
+ <div class="breadcrumbs-w3l">
+        <div class="container">
+          <span class="breadcrumbs">
+            <a href="index.html">Home</a> |
+            <span> Services</span>
+          </span>
+        </div>
+      </div>
+      <!-- //breadcrumbs -->
+      <div class="w3ls-section banner-single">
+            <div class="container">
+              <h4 class="main-title">List of Feedbacks</h4><br/><br/>
+             
+      <div class="w3ls-section banner-single">
+         <div class="container">
+          <table class="table table-striped">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Message</th>
+              <th>Query</th>
+
+              <th>Delete</th>
+            </tr>
+            <tr *ngFor="let x of feedlist">
+              <td>{{x.name}}</td>
+              <td>{{x.username}}</td>
+              <td>{{x.sub}}</td>
+              <td>{{x.mssg}}</td>
+              <td>{{x.query}}</td>
+              <td><a (click)="onuserdelete(x._id)">Delete</a></td>
+            </tr>
+          </table>
+         
+        </div>
+      </div>
+      <!-- //login -->
+      

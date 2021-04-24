@@ -1,0 +1,65 @@
+<div class="w3ls-section banner-single">
+    <div class="container">
+      <h4 class="main-title">Add Cities</h4>
+  
+      <div class="about-inner-main">
+        <div class="col-md-6 contact-left">
+    
+        </div>
+        <div class="col-sm-offset-3 col-md-8 w3layouts-reg-form contact-form-row-agileinfo">
+         
+          <form action="#" method="post" class="banner_form contact-inner-form">
+              <div class="sec-left">
+                  <label class="contact-form-text">Enter City Name</label>
+                      <input  type="text" class="form-control" placeholder="City Name" name="cityname" [(ngModel)] ="cityname" onfocus="this.value = '';" onblur="if (this.value == '') " required="">
+                      <div class="clearfix"></div>
+                    </div><br/>
+                    <div class="sec-left">
+                        <h4 style="color:white;"><input  type="file" name="citypic" (change) ="fileselected($event)" onfocus="this.value = '';" onblur="if (this.value == '') " required=""></h4>
+                      <div class="clearfix"></div>
+                    </div><br/>
+                    <div *ngIf = "visibility">
+                      <img src ="uploads/{{citypic}}" height ="75"><br/>
+                      <h4 style="color:white;">Choose new image,if required</h4>
+                      <input type = "submit" value ="Update" name ="s2" (click) ="oncityupdatedb()">
+                    </div>
+                    <input type="submit" value="Add" name = "s1" (click) ="oncityadd()">
+                  
+                    <br/>{{msg}}
+               <div class="clearfix"></div>
+               </form>
+               </div>
+               </div><br/><br/>
+               </div>
+              
+            <div class="services w3ls-section">
+                <div class="container">
+                  <div class="col-sm-offset-3 col-sm-5">
+                  <h5 class="main-title">Already added cities</h5>
+                </div>
+                <div class="agile_top_brands_grids">
+                  <div  class="col-md-12 serv-grid2"> 
+                     <!-- <div class="col-md-8 serv-grid2"> -->
+                     <div *ngFor="let x of allcity" class="col-md-4 top_brand_left">
+                    <!-- <div class="col-md-4 serv-sub1">     -->
+                       <div class="col-md-7 serv-sub1">
+                <!-- <div class="agile_top_brands_grids">
+                    <div  class="col-md-12 serv-grid2"> 
+                        <div class="col-md-8 serv-grid2"> -->
+                       <!-- <div *ngFor="let x of allcity" class="col-md-4 top_brand_left"> -->
+                      <!-- <div class="col-md-4 serv-sub1">     -->
+                         <!-- <div class="col-md-9 serv-sub1"> -->
+                      <img src="uploads/{{x.citypic}}" alt="" />
+                      <h5>{{x.cityname}}</h5>
+                      <h6><a routerLink = "#" (click) ="oncityupdate(x._id,x.cityname,x.citypic)">Update</a></h6>
+                      <h6><a routerLink = "#" (click)="oncitydelete(x._id)">Delete</a></h6>
+                    </div>
+      </div>
+      
+      </div>
+     
+       </div>    
+              <!--login-->
+        
+          <!--content-->
+        

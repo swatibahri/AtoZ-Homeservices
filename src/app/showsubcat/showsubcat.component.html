@@ -1,0 +1,35 @@
+<div class="login">
+    <div class="login">
+        <div class="main-agileits">
+          <div class="form-w3agile">
+            <div class="services w3ls-section">
+              <div class="container">
+               <div class="col-sm-offset-3 col-sm-7">
+                 <h5 class="main-title">Services we provide at your Doorstep</h5>
+                      </div>
+                      
+      <div  class="col-md-14 serv-grid2">  
+        <div class="agile_top_brands_grids">
+          <div *ngFor="let x of allsubcat" class="col-md-4 top_brand_left">
+           <div class="col-md-10 serv-sub1">
+              <div class="hover14 column">
+                <div class="agile_top_brand_left_grid">
+                  <div class="agile_top_brand_left_grid1">
+                    <figure>
+                      <div class="snipcart-item block" >
+                        <div class="snipcart-thumb">
+                          <a routerLink="/showemp" [queryParams]="{subcatid:x.subcatname}"><img height='100' title=" " alt=" " src="uploads/{{x.spic}}" /></a>		
+                          <h5>{{x.subcatname}}</h5>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            </div>
+            <div class="clearfix"> </div>
+            {{msg}}
+          </div>
+      </div>

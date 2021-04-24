@@ -1,0 +1,98 @@
+<!-- contact -->
+<div class="w3ls-section banner-single">
+  <div class="container">
+    <h4 class="main-title">Signup For Employee</h4>
+
+    <div class="about-inner-main">
+      <div class="col-md-6 contact-left">
+  
+      </div>
+      <div class="col-sm-offset-3 col-md-8 w3layouts-reg-form contact-form-row-agileinfo">
+       
+        <form action="#" method="post" class="banner_form contact-inner-form">
+          <!-- <div class="contact-form-left contact-field1"> -->
+            <div class="sec-left">
+                <label class="contact-form-text">Name</label>
+              <input placeholder="Name " name="name" type="text" [(ngModel)] ="name" required="">
+            </div>
+            <div class="sec-right">
+                <label class="contact-form-text">Address</label>
+            <textarea placeholder="Address" required="" name="address" [(ngModel)]="address"class="form-control"></textarea>
+          </div>
+            <div class="sec-right">
+                <label class="contact-form-text">Phone</label>
+              <input placeholder="Phone " name="phone" type="text" [(ngModel)] ="phone" required="">
+            </div>
+            <label class="contact-form-text">Choose gender</label>
+            <label><h4 style="color:white;"><input type="radio" name ="gen" value="Male" [(ngModel)]="gender" >Male</h4></label>&nbsp;
+            <label><h4 style="color:white;"><input type="radio" name ="gen" value="Female" [(ngModel)]="gender" >Female</h4></label><br/>
+
+            <div class="sec-right">
+                <label class="contact-form-text">Email Address</label>
+              <input placeholder="Email " name="email" type="text"  [(ngModel)] ="un" required="">
+            </div>
+            <div class="sec-right">
+                <label class="contact-form-text">Password</label>
+              <input placeholder="Password " name="password" type="text" [(ngModel)] ="pass" required="">
+            </div>
+            <div class="sec-right">
+                <label class="contact-form-text">Confirm Password</label>
+              <input placeholder=" Confirm Password " name="cpassword" type="text" [(ngModel)] ="cpass" required="">
+            </div>
+            <div class ="sec-right">
+                <label class="contact-form-text">Choose city</label>
+            <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
+              <select name="city" [(ngModel)]="cityname" class="form-control" (change)="fetchallcat()">
+                <option value="">Choose City</option>
+                <option *ngFor="let x of allcity" value="{{x.cityname}}">{{x.cityname}}</option>
+              </select>
+              </div>
+          </div>
+          
+            <div class ="sec-right">
+                <label class="contact-form-text">Choose Category</label>
+           <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
+              <select name="cat" [(ngModel)]="cat" class="form-control" (change) ="fetchSubCategories()"  >
+                <option value="">Choose Category</option>
+                <option *ngFor="let x of allcategory" value="{{x.cname}}">{{x.cname}}</option>
+              </select>
+            </div> 
+        <div class ="sec-right">
+         <label class="contact-form-text">Choose Sub-Category</label>
+            <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s"></div>
+             <select name="subcat" [(ngModel)]="subcat" class="form-control">
+                <option value="">Choose Sub-Category</option>
+                  <option *ngFor="let x of allsubcat" value="{{x.subcatname}}">{{x.subcatname}}</option>
+              </select><br/>
+              </div>
+                <div class="sec-left">
+                    <div class ="sec-right">
+                        <label class="contact-form-text">Experiance</label>
+                    <input placeholder="Experiance " name="exp" type="text" [(ngModel)] ="exp" required="">
+                  </div>
+
+                  <div class="sec-left">
+                      <div class ="sec-right">
+                   <label class="contact-form-text">Charges for the service</label>
+                    <input placeholder="Charges taken " name="charges" type="text" [(ngModel)] ="charges" required="">
+                  </div><br/>
+                  <div class="key">
+                      <h4 style="color:white;">Upload your Current Photograph here </h4><br/>
+                      <h4 style="color:white;"> <input  type="file" name="ppic" (change) ="fileselected($event)" onfocus="this.value = '';" onblur="if (this.value == '') " required=""></h4>
+                        <div class="clearfix"></div>
+                      </div><br/>
+            <!-- <div class="key">
+              <h3>Upload your ID Proof here</h3>
+                <input  type="file" name="idpic" (change) ="fileselected1($event)" onfocus="this.value = '';" onblur="if (this.value == '') " required="">
+                <div class="clearfix"></div>
+              </div>  -->
+           
+          <div class="contact-form-right contact-field2">
+            <input type="submit" value="Submit" (click) = "ons1click()">
+          </div>
+          {{msg}}
+
+      <div class="clearfix"></div>
+   
+
+<!-- contact -->

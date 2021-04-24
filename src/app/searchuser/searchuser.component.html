@@ -1,0 +1,36 @@
+<!-- contact -->
+<div class="w3ls-section banner-single">
+        <div class="container">
+          <h4 class="main-title">Search Users</h4><br/><br/>
+          <h5 class="main-title" align="center"><a routerLink="/searchworker">Click to search your Employee</a></h5>
+    
+         
+            <!-- <div class="col-md-6 contact-left"> -->
+                <div class="col-sm-offset-3 col-md-8 w3layouts-reg-form contact-form-row-agileinfo">
+            
+            <!-- <div class="col-md-6 w3layouts-reg-form contact-form-row-agileinfo"> -->
+            
+              <form action="#" method="post" class="banner_form contact-inner-form">
+                <!-- <div class="contact-form-left contact-field1"> -->
+         <div class="sec-left">
+            <label class="contact-form-text">Email Address</label>
+              <input type="email" placeholder="xxx@xx.com" required="" name="em" [(ngModel)]="un">
+      
+              <input type="submit" value="Search" name="s1" (click)="onsearch()">
+              <br/>{{msg}}
+              <br/>
+              <a routerLink ="/userlist"><h4 style="color:white;">Click Here to check list of users<span class ="glyphicon glyphicon-home"></span> </h4></a> <br/>
+              
+
+              <br/>
+            <div *ngIf ="visibility">
+              <h4 style="color:white;">Name :- {{name}}</h4>
+              <h4 style="color:white;">Phone :- {{phone}}</h4>
+              <h4 style="color:white;">Gender :- {{gender}}</h4>
+              <h4 style="color:white;">City :- {{cityname}}</h4>
+          </div>
+        </div>
+         </form>
+        </div>
+      </div>
+      <!-- //login -->

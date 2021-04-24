@@ -1,0 +1,56 @@
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+      <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+        <li class="active">Checkout</li>
+      </ol>
+    </div>
+  </div>
+  <!-- //breadcrumbs -->
+  <!-- register -->
+  <div class="services-main">
+      <div class="w3ls-section banner-single">
+          <div class="container">
+            <h4 class="main-title">Checkout Here</h4>
+        
+            <div class="about-inner-main">
+              <div class="col-md-6 contact-left">
+          
+              </div>
+              <div class="col-sm-offset-3 col-md-8 w3layouts-reg-form contact-form-row-agileinfo">
+               
+                <form action="#" method="post" class="banner_form contact-inner-form">
+              <div class="sec-left">
+          <label class="contact-form-text">Visiting Address</label>
+  <!-- <div class="register">
+    <div class="container">
+      <h2>Checkout here</h2>
+      <div class="login-form-grids"> -->
+       
+          <textarea placeholder="xxxxxx" required="" name="address" [(ngModel)]="address"class="form-control"></textarea><br/>
+          <label class="contact-form-text">Choose Payment Mode</label>
+          <h5 style="color:white;"><label><input type="radio" name="mode" value="card" [(ngModel)]="mode"(click)="onrclick()">Debit/Credit Card</label>&nbsp;</h5>
+            <h5 style="color:white;"><label><input type="radio" name="mode" value="cash" [(ngModel)]="mode"(click)="onr1click()">Cash on Delivery</label><br/></h5>
+        
+        <div *ngIf="visibility">
+            <label class="contact-form-text">Credit Card Number</label>
+          <input type="number" placeholder="xxxxxxxx"  required="" name="cnum" [(ngModel)]="cnum"class="form-control"><br/>
+          <label class="contact-form-text">Company Name</label>
+          <input type="text" placeholder="xxxxxx" class="form-control" required="" name="cname" [(ngModel)]="cname"><br/>
+          <label class="contact-form-text">Holder Name</label>
+          <input type="text" placeholder="xxxxxx" class="form-control" required="" name="hname" [(ngModel)]="hname"><br/>
+          <label class="contact-form-text">Expiry Date</label>
+          <input type="text" placeholder="xx/xxxx"  required="" name="date" [(ngModel)]="date"class="form-control"><br/>
+          <label class="contact-form-text">CVV No.</label>
+          <input type="number" placeholder="xxx" required="" name="cvvno" [(ngModel)]="cvvno"class="form-control"><br/>
+          </div>
+        
+          <input type="submit" name="s1" value="Make Payment" (click)="onpayment()">
+          {{msg}}
+        
+      
+    
+   </div>
+
+  <!-- //register -->

@@ -1,0 +1,38 @@
+
+<!-- //breadcrumbs -->
+<!-- checkout -->
+<div class="checkout">
+    <div class="container">
+        
+        <div *ngIf="visibility">Please add products to cart first<div class="checkout-right-basket">
+                         <a routerLink="showcategory"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
+            </div></div>                                             
+         <div class="checkout-right">
+            <table class="timetable_sub">
+                <thead>
+                    <tr>
+                        <th>Sr. No</th>
+                        <th>Order No</th>	
+                        <th>Payment Mode</th>
+                        <th>Address</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        
+                    </tr>
+                </thead>
+                <tr class="rem1" *ngFor="let x of orders;let i=index">
+                    <td class="invert">{{i+1}}</td>
+                    <td class="invert"><a routerLink="/orderdetails" [queryParams]="{orderid: x._id}">{{x._id}}</a></td>
+                    <td class="invert">{{x.paymentmode}}</td>
+                    <td class="invert">{{x.address}}</td>
+                    <td class="invert">{{x.orderdate}}</td>
+                    <td class="invert">{{x.orderamount}}</td>
+                    <td class="invert">{{x.status}}</td>
+
+                          </tr> 
+            </table>
+        </div>
+       </div>
+        
+    </div>
